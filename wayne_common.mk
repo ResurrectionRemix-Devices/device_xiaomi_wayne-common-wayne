@@ -313,6 +313,10 @@ PRODUCT_PACKAGES += \
     init.performance.sdm660.rc \
     ueventd.qcom.rc
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.device.rc
+
 # FM
 ifeq ($(BOARD_HAVE_QCOM_FM),true)
 PRODUCT_PACKAGES += \
