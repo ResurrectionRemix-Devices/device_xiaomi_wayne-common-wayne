@@ -18,7 +18,6 @@ Currently Supported Devices: wayne (MI 6X)
 Here everything used:
   https://github.com/ResurrectionRemix-Devices/device_xiaomi_sdm660-common/tree/Q/overlay-rr
   https://github.com/LineageOS/android_device_xiaomi_sdm660-common
-
 ## Copyright
 
 ```
