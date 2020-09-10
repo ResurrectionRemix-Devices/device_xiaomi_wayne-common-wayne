@@ -419,7 +419,8 @@ PRODUCT_PACKAGES += \
 
 # Impositions
 DEVICE_PACKAGE_OVERLAYS += \
-    $(WAYNE_COMMON_PATH)/overlay-device-specific
+    $(WAYNE_COMMON_PATH)/overlay-device-specific \
+    $(WAYNE_COMMON_PATH)/overlay-device-specific-lineage
 
 # RRO configuration
 TARGET_USES_RRO := true
