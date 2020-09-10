@@ -271,6 +271,7 @@ PRODUCT_PACKAGES += \
 
 # Folio Sensor Daemon
 PRODUCT_PACKAGES += \
+     folio_daemon
 
 # IDC
 PRODUCT_COPY_FILES += \
