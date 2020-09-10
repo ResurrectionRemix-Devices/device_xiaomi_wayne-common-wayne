@@ -142,11 +142,11 @@ DEVICE_MATRIX_FILE := $(WAYNE_COMMON_PATH)/manifests/compatibility_matrix.xml
 #GCC
 TARGET_NEW_GCC_COMPILE := true
 
+# ConfigFS
+TARGET_FS_CONFIG_GEN := $(WAYNE_COMMON_PATH)/configurations/config.fs
+
 # CNE and DPM
 BOARD_USES_QCNE := true
-
-# ConfigFS
-TARGET_FS_CONFIG_GEN := $(WAYNE_COMMON_PATH)/configs/config.fs
 
 # Display
 BOARD_USES_ADRENO := true
