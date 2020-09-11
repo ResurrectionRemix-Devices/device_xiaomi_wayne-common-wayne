@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (C) 2018 The Android Open Source Project
+  Copyright (C) 2020 The Resurrection Remix Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -16,5 +16,6 @@
   -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="#FFFFFF" />
+    <item android:color="?android:attr/colorAccent" android:state_activated="false" />
+    <item android:color="?android:attr/textColorPrimaryInverse" android:state_activated="true" />
 </selector>

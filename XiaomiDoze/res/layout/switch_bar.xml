@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 The Android Open Source Project
+<!-- Copyright (C) 2020 The Resurrection Remix Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,8 +19,8 @@
     android:layout_width="match_parent"
     android:layout_height="?android:attr/actionBarSize"
     android:background="@drawable/switchbar_background"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
+    android:paddingStart="@dimen/switch_bar_paddingStart"
+    android:paddingEnd="@dimen/switch_bar_paddingEnd"
     android:clickable="true"
     android:gravity="center">
 
@@ -33,8 +33,8 @@
         android:maxLines="2"
         android:ellipsize="end"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"
-        android:textColor="?android:attr/textColorPrimaryInverse"
-        android:textSize="16sp"
+        android:textColor="@color/switch_bar_text_color"
+        android:textSize="@dimen/switch_bar_textview_text_size"
         android:textAlignment="viewStart" />
 
     <Switch
