@@ -1,6 +1,7 @@
 /*
  *  Copyright (c) 2013, The Linux Foundation. All rights reserved.
- *  Not a Contribution.
+ *  Not a Contribution, Apache license notifications and license are retained
+ *  for attribution purposes only.
  *
  * Copyright (C) 2012 The Android Open Source Project
  *
@@ -16,9 +17,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
+#define BLUETOOTH_QTI_SW TRUE
 // Disables read remote device feature
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    32
@@ -26,6 +27,5 @@
 #define GATT_MAX_PHY_CHANNEL  10
 // skips conn update at conn completion
 #define BT_CLEAN_TURN_ON_DISABLED 1
-
 #define AVDT_NUM_SEPS 35
 #endif
