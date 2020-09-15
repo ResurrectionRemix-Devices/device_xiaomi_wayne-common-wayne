@@ -75,12 +75,6 @@ AUDIO_DISABLE_SWAP_CHANNELS := true
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
-# DT2W
-TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
-
-# Crypto
-TARGET_HW_DISK_ENCRYPTION := true
-
 #64Bits
 TARGET_SUPPORTS_64_BIT_APPS := true
 
@@ -129,11 +123,9 @@ LOC_HIDL_VERSION := 3.0
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(WAYNE_COMMON_PATH)/manifests/framework_manifest.xml
-ifneq ($(filter lavender,$(TARGET_DEVICE)),)
-DEVICE_MANIFEST_FILE := $(shell sed 's/3.0/4.0/g' $(WAYNE_COMMON_PATH)/manifests/manifest.xml > manifest.xml && echo manifest.xml)
-else
+
 DEVICE_MANIFEST_FILE := $(WAYNE_COMMON_PATH)/manifests/manifest.xml
-endif
+
 DEVICE_MATRIX_FILE := $(WAYNE_COMMON_PATH)/manifests/compatibility_matrix.xml
 
 #Clang
@@ -143,7 +135,7 @@ DEVICE_MATRIX_FILE := $(WAYNE_COMMON_PATH)/manifests/compatibility_matrix.xml
 TARGET_NEW_GCC_COMPILE := true
 
 # ConfigFS
-TARGET_FS_CONFIG_GEN := $(WAYNE_COMMON_PATH)/configurations/config.fs
+TARGET_FS_CONFIG_GEN := $(WAYNE_COMMON_PATH)/configs/config.fs
 
 # CNE and DPM
 BOARD_USES_QCNE := true
