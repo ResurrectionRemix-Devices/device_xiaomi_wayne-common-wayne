@@ -174,7 +174,6 @@ bool GnssAPIClient::gnssSetPositionMode(IGnss::GnssPositionMode mode,
         // For MSA, we always treat it as SINGLE mode.
         mTrackingOptions.minInterval = SINGLE_SHOT_MIN_TRACKING_INTERVAL_MSEC;
     }
-    mTrackingOptions.minDistance = preferredAccuracyMeters;
     if (mode == IGnss::GnssPositionMode::STANDALONE)
         mTrackingOptions.mode = GNSS_SUPL_MODE_STANDALONE;
     else if (mode == IGnss::GnssPositionMode::MS_BASED)
@@ -541,7 +540,7 @@ static void convertGnssSvStatus(GnssSvNotification& in, IGnssCallback::GnssSvSta
     }
     for (size_t i = 0; i < out.numSvs; i++) {
         IGnssCallback::GnssSvInfo& info = out.gnssSvList[i];
-        info.svid = in.gnssSvs[i].svId;
+        convertGnssSvid(in.gnssSvs[i], info.svid);
         convertGnssConstellationType(in.gnssSvs[i].type, info.constellation);
         info.cN0Dbhz = in.gnssSvs[i].cN0Dbhz;
         info.elevationDegrees = in.gnssSvs[i].elevation;
