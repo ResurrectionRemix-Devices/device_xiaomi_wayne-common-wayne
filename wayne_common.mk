@@ -418,6 +418,14 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(WAYNE_COMMON_PATH)/overlay-device-specific-lineage/lineage-sdk
 
+# Powerhint
+PRODUCT_COPY_FILES += \
+    $(WAYNE_COMMON_PATH)/power-libperfmgr/sdm660_powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.3-service.xiaomi_sdm660-libperfmgr
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
