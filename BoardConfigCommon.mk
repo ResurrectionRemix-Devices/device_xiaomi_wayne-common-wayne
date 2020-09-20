@@ -222,8 +222,10 @@ TARGET_USES_QCOM_BSP := false
 # Recovery
 ifneq ($(ENABLE_A_ONLY), true)
 TARGET_RECOVERY_FSTAB := $(WAYNE_COMMON_PATH)/rootdir/etc/fstab_A.qcom
-ifneq ($(ENABLE_AB), true)
+else ifeq ($(ENABLE_AB), true)
 TARGET_RECOVERY_FSTAB := $(WAYNE_COMMON_PATH)/rootdir/etc/fstab_AB.qcom
+else ifeq ($(ENABLE_ENCRYPTION), true)
+TARGET_RECOVERY_FSTAB := $(WAYNE_COMMON_PATH)/rootdir/etc/fstab_FE.qcom
 else
 TARGET_RECOVERY_FSTAB := $(WAYNE_COMMON_PATH)/rootdir/etc/fstab.qcom
 endif
