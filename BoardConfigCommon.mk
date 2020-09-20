@@ -226,7 +226,7 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_USES_QCOM_BSP := false
 
 # Recovery
-ifneq ($(ENABLE_A_ONLY), true)
+ifneq ($(filter lavender,$(TARGET_DEVICE)),)
 TARGET_RECOVERY_FSTAB := $(WAYNE_COMMON_PATH)/rootdir/etc/fstab_A.qcom
 else ifeq ($(ENABLE_AB), true)
 TARGET_RECOVERY_FSTAB := $(WAYNE_COMMON_PATH)/rootdir/etc/fstab_AB.qcom
