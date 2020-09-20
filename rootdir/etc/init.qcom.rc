@@ -200,7 +200,6 @@ on boot
     chown system system /sys/class/power_supply/battery/cycle_count
     chown system graphics /sys/kernel/gpu/gpu_clock
     chown system graphics /sys/kernel/gpu/gpu_busy
-    chown system graphics /sys/devices/virtual/graphics/fb0/measured_fps
     chmod 0666 /sys/class/thermal/thermal_zone0/temp
     chmod 0666 /sys/class/power_supply/battery/temp
     chmod 0666 /sys/class/power_supply/battery/charge_full
@@ -209,7 +208,6 @@ on boot
     chmod 0666 /sys/class/power_supply/battery/cycle_count
     chmod 0660 /sys/kernel/gpu/gpu_clock
     chmod 0660 /sys/kernel/gpu/gpu_busy
-    chmod 0666 /sys/devices/virtual/graphics/fb0/measured_fps
 
     mkdir /vendor/mnt/persist/drm 0770 system system
     mkdir /vendor/mnt/persist/bluetooth 0770 bluetooth bluetooth
