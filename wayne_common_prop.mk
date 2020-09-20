@@ -7,25 +7,54 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.fw.dex2oat_thread_count=8 \
     ro.vendor.qti.am.reschedule_service=true
 
-# IMS
+# Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.vendor.ims.disableUserAgent=0
-
-# LMKD
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lmk.low=1001 \
-    ro.lmk.medium=800 \
-    ro.lmk.critical=0 \
-    ro.lmk.critical_upgrade=false \
-    ro.lmk.upgrade_pressure=100 \
-    ro.lmk.downgrade_pressure=100 \
-    ro.lmk.kill_heaviest_task=true\
-    ro.lmk.kill_timeout_ms=100 \
-    ro.lmk.use_minfree_levels=true \
-    ro.lmk.log_stats=true \
-    ro.lmk.use_psi=false
+    af.fast_track_multiplier=1 \
+    audio.deep_buffer.media=true \
+    audio.offload.min.duration.secs=30 \
+    audio.offload.video=true \
+    audio.safemedia.bypass=true \
+    audio.sys.noisy.broadcast.delay=600 \
+    audio.sys.offload.pstimeout.secs=3 \
+    persist.audio.in_mmap_delay_micros=100 \
+    persist.audio.out_mmap_delay_micros=150 \
+    persist.dirac.acs.controller=qem \
+    persist.dirac.acs.ignore_error=1 \
+    persist.dirac.acs.storeSettings=1 \
+    persist.vendor.audio.fluence.speaker=true \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.voicerec=false \
+    persist.vendor.audio.hifi.int_codec=true \
+    persist.vendor.audio.hw.binder.size_kbyte=1024 \
+    persist.vendor.audio.ras.enabled=false \
+    ro.af.client_heap_size_kbyte=7168 \
+    ro.audio.soundfx.dirac=true \
+    ro.config.vc_call_vol_steps=7 \
+    ro.config.media_vol_steps=25 \
+    ro.vendor.audio.sdk.fluencetype=fluence \
+    ro.vendor.audio.sdk.ssr=false \
+    vendor.audio.adm.buffering.ms=12 \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false \
+    vendor.audio.flac.sw.decoder.24bit=true \
+    vendor.audio_hal.period_size=240 \
+    vendor.audio.hw.aac.encoder=true \
+    vendor.audio.offload.buffer.size.kb=64 \
+    vendor.audio.offload.gapless.enabled=true \
+    vendor.audio.offload.multiaac.enable=true \
+    vendor.audio.offload.multiple.enabled=false \
+    vendor.audio.offload.passthrough=false \
+    vendor.audio.offload.track.enable=false \
+    vendor.audio.parser.ip.buffer.size=262144 \
+    vendor.audio.safx.pbe.enabled=true \
+    vendor.audio.snd_card.open.retries=50 \
+    vendor.audio.tunnel.encode=false \
+    vendor.audio.use.sw.alac.decoder=true \
+    vendor.audio.use.sw.ape.decoder=true \
+    vendor.audio.spkr_prot.tx.sampling_rate=48000 \
+    vendor.audio.volume.headset.gain.depcal=true \
+    vendor.fm.a2dp.conc.disabled=true \
+    vendor.voice.path.for.pcm.voip=true
 
 # Audio Feature
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -70,6 +99,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.vbat.enable=true \
     vendor.audio.feature.wsa.enable=false
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.spkr_prot.enable=true
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bt.aac_frm_ctl.enabled=true \
@@ -81,7 +113,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.vendor.bt.a2dp.aac_whitelist=false \
     persist.vendor.qcom.bluetooth.enable.splita2dp=true \
     persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac \
-    persist.bluetooth.a2dp_offload.disabled=false \
+    persist.bluetooth.a2dp_offload.disabled=true \
     ro.bluetooth.library_name=libbluetooth_qti.so \
     ro.bluetooth.a2dp_offload.supported=true \
     vendor.audio.feature.a2dp_offload.enable=true \
@@ -141,52 +173,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.ms=android-xiaomi-rev2
 
-# Audio
-PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1 \
-    audio.deep_buffer.media=true \
-    audio.offload.min.duration.secs=30 \
-    audio.offload.video=true \
-    audio.safemedia.bypass=true \
-    audio.sys.noisy.broadcast.delay=600 \
-    audio.sys.offload.pstimeout.secs=3 \
-    persist.audio.in_mmap_delay_micros=100 \
-    persist.audio.out_mmap_delay_micros=150 \
-    persist.vendor.audio.fluence.speaker=true \
-    persist.vendor.audio.fluence.voicecall=true \
-    persist.vendor.audio.fluence.voicerec=false \
-    persist.vendor.audio.hifi.int_codec=true \
-    persist.vendor.audio.hw.binder.size_kbyte=1024 \
-    persist.vendor.audio.ras.enabled=false \
-    ro.af.client_heap_size_kbyte=7168 \
-    ro.config.vc_call_vol_steps=7 \
-    ro.config.media_vol_steps=25 \
-    ro.vendor.audio.sdk.fluencetype=fluence \
-    ro.vendor.audio.sdk.ssr=false \
-    vendor.audio.adm.buffering.ms=12 \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false \
-    vendor.audio.flac.sw.decoder.24bit=true \
-    vendor.audio_hal.period_size=240 \
-    vendor.audio.hw.aac.encoder=true \
-    vendor.audio.offload.buffer.size.kb=64 \
-    vendor.audio.offload.gapless.enabled=true \
-    vendor.audio.offload.multiaac.enable=true \
-    vendor.audio.offload.multiple.enabled=false \
-    vendor.audio.offload.passthrough=false \
-    vendor.audio.offload.track.enable=false \
-    vendor.audio.parser.ip.buffer.size=262144 \
-    vendor.audio.safx.pbe.enabled=true \
-    vendor.audio.snd_card.open.retries=50 \
-    vendor.audio.tunnel.encode=false \
-    vendor.audio.use.sw.alac.decoder=true \
-    vendor.audio.use.sw.ape.decoder=true \
-    vendor.audio.spkr_prot.tx.sampling_rate=48000 \
-    vendor.audio.volume.headset.gain.depcal=true \
-    vendor.fm.a2dp.conc.disabled=true \
-    vendor.voice.path.for.pcm.voip=true
-
-
 # HAL1 apps list
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.hal1.packagelist=com.whatsapp,com.android.camera,com.android.camera2,com.instagram.android \
@@ -195,6 +181,26 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # iwlan vowifi corresponding
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.data.iwlan.enable=true
+
+# IMS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.vendor.ims.disableUserAgent=0
+
+# LMKD
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.low=1001 \
+    ro.lmk.medium=800 \
+    ro.lmk.critical=0 \
+    ro.lmk.critical_upgrade=false \
+    ro.lmk.upgrade_pressure=100 \
+    ro.lmk.downgrade_pressure=100 \
+    ro.lmk.kill_heaviest_task=true\
+    ro.lmk.kill_timeout_ms=100 \
+    ro.lmk.use_minfree_levels=true \
+    ro.lmk.log_stats=true \
+    ro.lmk.use_psi=false
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
