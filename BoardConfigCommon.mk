@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2020 The Resurrection Remix Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -78,9 +79,6 @@ TARGET_USES_64_BIT_BINDER := true
 #64Bits
 TARGET_SUPPORTS_64_BIT_APPS := true
 
-# WLAN MAC
-WLAN_MAC_SYMLINK := true
-
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
@@ -117,28 +115,18 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 HEALTHD_USE_BATTERY_INFO := true
 
-# GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
-LOC_HIDL_VERSION := 3.0
-
-# HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(WAYNE_COMMON_PATH)/manifests/framework_manifest.xml
-
-DEVICE_MANIFEST_FILE := $(WAYNE_COMMON_PATH)/manifests/manifest.xml
-
-DEVICE_MATRIX_FILE := $(WAYNE_COMMON_PATH)/manifests/compatibility_matrix.xml
-
-#Clang
+# Clang
 #TARGET_KERNEL_CLANG_COMPILE := true
+#TARGET_KERNEL_CLANG_VERSION := 6778096
 
 #GCC
 TARGET_NEW_GCC_COMPILE := true
 
-# ConfigFS
-TARGET_FS_CONFIG_GEN := $(WAYNE_COMMON_PATH)/configs/config.fs
-
 # CNE and DPM
 BOARD_USES_QCNE := true
+
+# ConfigFS
+TARGET_FS_CONFIG_GEN := $(WAYNE_COMMON_PATH)/configs/config.fs
 
 # Display
 BOARD_USES_ADRENO := true
@@ -151,6 +139,15 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 # EXFAT
 TARGET_EXFAT_DRIVER := sdfat
+
+# GPS
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
+LOC_HIDL_VERSION := 3.0
+
+# HIDL
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(WAYNE_COMMON_PATH)/manifests/framework_manifest.xml
+DEVICE_MANIFEST_FILE := $(WAYNE_COMMON_PATH)/manifests/manifest.xml
+DEVICE_MATRIX_FILE := $(WAYNE_COMMON_PATH)/manifests/compatibility_matrix.xml
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
@@ -215,9 +212,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
-# Power
-TARGET_USES_INTERACTION_BOOST := true
-
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
@@ -226,12 +220,10 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_USES_QCOM_BSP := false
 
 # Recovery
-ifneq ($(filter lavender,$(TARGET_DEVICE)),)
+ifneq ($(ENABLE_A_ONLY), true)
 TARGET_RECOVERY_FSTAB := $(WAYNE_COMMON_PATH)/rootdir/etc/fstab_A.qcom
-else ifeq ($(ENABLE_AB), true)
+ifneq ($(ENABLE_AB), true)
 TARGET_RECOVERY_FSTAB := $(WAYNE_COMMON_PATH)/rootdir/etc/fstab_AB.qcom
-else ifeq ($(ENABLE_ENCRYPTION), true)
-TARGET_RECOVERY_FSTAB := $(WAYNE_COMMON_PATH)/rootdir/etc/fstab_FE.qcom
 else
 TARGET_RECOVERY_FSTAB := $(WAYNE_COMMON_PATH)/rootdir/etc/fstab.qcom
 endif
