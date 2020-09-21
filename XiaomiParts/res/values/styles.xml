@@ -16,6 +16,7 @@
 <resources>
   <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Settings">
       <item name="preferenceTheme">@style/PreferenceTheme</item>
+      <item name="android:navigationBarColor">@android:color/transparent</item>
   </style>
 
   <style name="PreferenceTheme" parent="@style/PreferenceThemeOverlay.SettingsBase" />
