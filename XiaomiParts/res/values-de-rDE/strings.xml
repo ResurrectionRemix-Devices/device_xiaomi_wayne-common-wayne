@@ -20,6 +20,11 @@
     <string name="device_kcal_title">Displaykalibierung</string>
     <string name="vibration_strength_title">Stärke</string>
 
+    <!-- Battery Optimizer Prefs -->
+    <string name="battery_optimize_title_category">System</string>
+    <string name="battery_optimize_title">Begrenzung des Batterieverbrauchs</string>
+    <string name="battery_optimize_summary">Mit diesem Hintergrunddienst können Sie Batteriestrom sparen, indem Sie einige nutzlose System-Apps und vom Benutzer installierte Apps (Apps, die Sie installiert haben) Ihrer Wahl in den Ruhezustand versetzen oder stoppen. Ausgenommen Apps oder Hintergrundaktivitäten, die im Hintergrund ausgeführt werden müssen. Zum Beispiel: Musik-Player, AudioFX-ähnliche Dienste.</string>
+
     <!-- Thermal Profiles -->
     <string name="thermal_profile_title">Temperatur</string>
     <string name="thermal_title">Temperatur Einstellung</string>

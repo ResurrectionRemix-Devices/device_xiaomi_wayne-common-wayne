@@ -37,6 +37,11 @@
     <string name="thermal_summary">Выберите Ваш профиль производительности</string>
     <string name="thermal_dialogTitle">Выберите Ваш профиль производительности</string>
 
+    <!-- Battery Optimizer Prefs -->
+    <string name="battery_optimize_title_category">Система</string>
+    <string name="battery_optimize_title">Ограничение расхода заряда аккумулятора</string>
+    <string name="battery_optimize_summary">Эта фоновая служба может помочь сэкономить заряд батареи, переведя в спящий режим или полностью останавливая некоторые бесполезные системные приложения и приложения которые вы выберите (Из списка приложений, установленных вами). Исключая приложения или фоновые активности, которые имеют необходимость работать в фоне.</string>
+
     <!-- Values for Thermal Presets -->
     <string name="thermal_performance">Производительность</string>
     <string name="thermal_battery">Энергосбережение</string>

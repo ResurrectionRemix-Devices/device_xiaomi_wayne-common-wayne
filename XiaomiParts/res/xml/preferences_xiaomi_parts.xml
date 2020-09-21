@@ -109,6 +109,24 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="battery_optimize"
+        android:title="@string/battery_optimize_title_category">
+
+          <Preference
+            android:key="battery_optimize_pref"
+	    android:enabled="false"
+            android:persistent="false"
+            android:summary="@string/battery_optimize_summary"
+            android:title="@string/battery_optimize_title"
+            android:icon="@drawable/ic_battery_optimize">
+            <!--<intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.devicex.ButtonSettingsActivity"
+                android:targetPackage="org.lineageos.settings.devicex" /> -->
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="thermal_profile"
         android:title="@string/thermal_profile_title">
 
