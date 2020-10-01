@@ -115,8 +115,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac \
     persist.bluetooth.a2dp_offload.disabled=true \
     ro.bluetooth.library_name=libbluetooth_qti.so \
-    ro.bluetooth.a2dp_offload.supported=false \
-    vendor.audio.feature.a2dp_offload.enable=false \
+    ro.bluetooth.a2dp_offload.supported=true \
+    vendor.audio.feature.a2dp_offload.enable=true \
     vendor.bluetooth.soc=cherokee
 
 # Camera
