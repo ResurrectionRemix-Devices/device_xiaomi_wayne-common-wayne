@@ -66,6 +66,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Verity
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
+PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/bootdevice/by-name/vendor
+$(call inherit-product, build/target/product/verity.mk)
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -308,7 +313,8 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.xiaomi_parts.rc \
     init.performance.sdm660.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.verity.rc
 
 # FM
 ifeq ($(BOARD_HAVE_QCOM_FM),true)
