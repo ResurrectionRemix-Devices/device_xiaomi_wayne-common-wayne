@@ -25,11 +25,6 @@
     <string name="vibration_title">Retroalimentación háptica</string>
     <string name="vibration_strength_title">Fuerza</string>
 
-    <!-- Battery Optimizer Prefs -->
-    <string name="battery_optimize_title_category">Sistema</string>
-    <string name="battery_optimize_title">Limitar el consumo de batería</string>
-    <string name="battery_optimize_summary">Este servicio en segundo plano puede ayudar a ahorrar energía de la batería hibernando o deteniendo por completo algunas aplicaciones inútiles del sistema y aplicaciones que seleccione (de la lista de aplicaciones que ha instalado). Excluyendo aplicaciones o actividades en segundo plano que deben ejecutarse en segundo plano.</string>
-
     <!-- Thermal Profiles -->
     <string name="thermal_profile_title">Rendimiento</string>
     <string name="thermal_title">Ajustes de Rendimiento</string>

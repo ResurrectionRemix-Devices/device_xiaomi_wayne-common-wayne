@@ -43,11 +43,6 @@
     <string name="thermal_summary">Choose your Thermal Profile</string>
     <string name="thermal_dialogTitle">Choose your Thermal Profile</string>
 
-    <!-- Battery Optimizer Prefs -->
-    <string name="battery_optimize_title_category">System</string>
-    <string name="battery_optimize_title">Limiting Battery Consumption</string>
-    <string name="battery_optimize_summary">This background service can help you save battery power by hibernating or stopping some useless system apps and user-installed (apps, you have installed) apps of your choice. Excluding apps or background activities that need to run  in the background. For example: music players, AudioFX-like services.</string>
-
     <!-- Values for Thermal Presets -->
     <string name="thermal_performance">Performance</string>
     <string name="thermal_battery">Battery</string>

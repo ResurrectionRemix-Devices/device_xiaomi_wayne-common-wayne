@@ -29,11 +29,6 @@
     <string name="vibration_title">振動フィードバック</string>
     <string name="vibration_strength_title">強さ</string>
 
-    <!-- Battery Optimizer Prefs -->
-    <string name="battery_optimize_title_category">システム</string>
-    <string name="battery_optimize_title">バッテリー消費を制限する</string>
-    <string name="battery_optimize_summary">このバックグラウンドサービスは、一部の不要なシステムアプリや選択したアプリ（インストールしたアプリのリストから）を休止または完全に停止することにより、バッテリーの電力を節約するのに役立ちます。バックグラウンドで実行する必要があるアプリケーションまたはバックグラウンドアクティビティを除外します。</string>
-
     <!-- Thermal Profiles -->
     <string name="thermal_profile_title">パフォーマンス</string>
     <string name="thermal_title">パフォーマンスの設定</string>
