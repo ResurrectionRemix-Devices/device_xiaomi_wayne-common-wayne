@@ -91,6 +91,7 @@ vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|eb0e912d25b06f977d5a89345c72d142b7ffb8ae
 # QTI-Bluetooth (Audio) - from LA.UM.8.2.r1-06700-sdm660.0
 vendor/lib/btaudio_offload_if.so|5b1c1d81aeaa39923b28196c84aa2269d318fcd6
 vendor/lib/hw/audio.bluetooth_qti.default.so|bbf5bed40ab75e0feed0753a40743dbf6979dfb9
+vendor/lib/hw/audio.primary.sdm660.so|7874ea0e303a9c969e186cbcb3bff293d40e9695
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|87df9077916c6b9d4668c2156da165492a393386
 vendor/lib/libbluetooth_audio_session_qti.so|dcd45e11d85eb605b5f516961f88bf8b0a80c0eb
 vendor/lib64/btaudio_offload_if.so|f9d7229e818a3044d56739d9d47462c4af726c02
